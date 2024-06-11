@@ -5,106 +5,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>inject.lol</title>
     <style>
-        html, body, a, button {
-            cursor: url('knife.ico'), pointer;
-        }
-        
-        body {
-            margin: 0;
-            overflow: hidden;
-            background-color: rgb(15, 17, 15);
-            color: white;
-            font-family: 'Segoe UI', 'Source Sans Pro', Calibri, Candara, Arial, sans-serif;
-            text-align: center;
-            font-weight: bold;
-            text-shadow: 0 0 3px #FFFFFF, 0 0 6px #FFFFFF, 0 0 9px #FFFFFF;
-        }
-        
-        #overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        #enter-button {
-            color: white;
-            background-color: transparent;
-            text-decoration: none;
-            border: none;
-            font-family: 'Courier New', Arial, sans-serif;
-            font-size: 24px;
-            padding: 20px 40px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            font-weight: bold;
-            text-shadow: 0 0 3px #FFFFFF, 0 0 6px #FFFFFF, 0 0 9px #FFFFFF;
-        }
-        
-        #main-content {
-            display: none;
-        }
-        
-        #main-content a {
-            color: red; /* Hyperlinks are red by default */
-            text-decoration: underline;
-            transition: color 0.3s;
-            font-weight: bold;
-            text-shadow: 0 0 3px #FFFFFF, 0 0 6px #FFFFFF, 0 0 9px #FFFFFF;
-        }
-        
-        #main-content a:hover {
-            color: darkred;
-            text-shadow: 0 0 3px #FFFFFF, 0 0 6px #00FF00, 0 0 9px #8B0000;
-        }
-        
-        body .transparent-button {
-            font-weight: bold;
-            text-shadow: 0 0 3px #FFFFFF, 0 0 6px #00FF00, 0 0 9px #00FF00;
-        }
-        
-        #favorites-text {
-            display: none;
-            color: white;
-            font-size: 24px;
-            margin-bottom: 10px;
-            font-weight: bold;
-            text-shadow: 0 0 3px #FFFFFF, 0 0 6px #00FF00, 0 0 9px #00FF00;
-        }
-        
-        #top-nav {
-            display: none;
-        }
-        
-        #top-nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        
-        #top-nav ul li {
-            margin: 10px;
-            font-weight: bold;
-            text-shadow: 0 0 3px #FFFFFF, 0 0 6px #00FF00, 0 0 9px #00FF00;
-        }
-        
-        #top-nav ul li a {
-            color: red;
-            text-decoration: underline;
-            transition: color 0.3s;
-            font-weight: bold;
-            text-shadow: 0 0 3px #FFFFFF, 0 0 6px #FF0000, 0 0 9px #FF0000;
-        }
-        
-        #top-nav ul li a:hover {
-            color: darkred;
-            text-shadow: 0 0 3px #FFFFFF, 0 0 6px #FFFFFF, 0 0 9px #FFFFFF;
-        }
+html, body, a, button {
+    cursor: url('knife.ico'), pointer;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: rgb(15, 17, 15);
+    color: white;
+    font-family: 'Segoe UI', 'Source Sans Pro', Calibri, Candara, Arial, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0 0 3px #FFFFFF, 0 0 6px #FFFFFF, 0 0 9px #FFFFFF;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#enter-button {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+    border: none;
+    font-family: 'Courier New', Arial, sans-serif;
+    font-size: 24px;
+    padding: 20px 40px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    text-shadow: 0 0 3px #FFFFFF, 0 0 6px #FFFFFF, 0 0 9px #FFFFFF;
+}
+
+#main-content {
+    display: none;
+}
+
+#main-content p {
+    text-shadow: none; /* Remove text-shadow for readability */
+}
+
+#main-content a {
+    color: red; /* Hyperlinks are red by default */
+    text-decoration: underline;
+    transition: color 0.3s;
+    font-weight: bold;
+    text-shadow: 0 0 3px #FFFFFF, 0 0 6px #FFFFFF, 0 0 9px #FFFFFF;
+}
+
+#main-content a:hover {
+    color: darkred;
+    text-shadow: 0 0 3px #FFFFFF, 0 0 6px #00FF00, 0 0 9px #8B0000;
+}
+
+body .transparent-button {
+    font-weight: bold;
+    text-shadow: 0 0 3px #FFFFFF, 0 0 6px #00FF00, 0 0 9px #00FF00;
+}
+
+#favorites-text {
+    display: none;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-shadow: 0 0 3px #FFFFFF, 0 0 6px #00FF00, 0 0 9px #00FF00;
+}
+
+#top-nav {
+    display: none;
+}
+
+#top-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#top-nav ul li {
+    margin: 10px;
+    font-weight: bold;
+    text-shadow: 0 0 3px #FFFFFF, 0 0 6px #00FF00, 0 0 9px #00FF00;
+}
+
+#top-nav ul li a {
+    color: red;
+    text-decoration: underline;
+    transition: color 0.3s;
+    font-weight: bold;
+    text-shadow: 0 0 3px #FFFFFF, 0 0 6px #FF0000, 0 0 9px #FF0000;
+}
+
+#top-nav ul li a:hover {
+    color: darkred;
+    text-shadow: 0 0 3px #FFFFFF, 0 0 6px #FFFFFF, 0 0 9px #FFFFFF;
+}
+
     </style>
 </head>
 <body>
