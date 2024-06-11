@@ -149,6 +149,11 @@ body .transparent-button {
             topNav.style.display = "block";
             backgroundAudio.play();
         });
+        
+        var blink = document.getElementById('main-content');
+        setInterval(function() {
+            blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+        }, 1500);
     </script>
 </body>
 </html>
