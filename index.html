@@ -59,14 +59,16 @@ body {
 
 #main-content {
     display: none;
-    font-size: 24px; /* Increase font size */
-    text-shadow: 0 0 5px #FFFFFF, 0 0 10px #FFFFFF, 0 0 20px #FFFFFF, 0 0 30px #FFFFFF, 0 0 40px #FFFFFF, 0 0 55px #FFFFFF, 0 0 75px #FFFFFF; /* More intense neon effect */
+    font-family: 'Courier New', Arial, sans-serif;
+    font-size: 18px; /* Increase font size */
+    text-shadow: 0 0 5px #FFFFFF, 0 0 10px #FFFFFF, 0 0 20px #FFFFFF, 0 0 30px #FFFFFF, 0 0 40px #FFFFFF, 0 0 55px #FFFFFF; /* More intense neon effect */
 }
 
 #main-content a {
     color: red; /* Hyperlinks are red by default */
     text-decoration: underline;
     transition: color 0.3s;
+    font-weight: bold;
     text-shadow: 0 0 1px #FFFFFF, 0 0 2px #FFFFFF, 0 0 3px #FFFFFF;
 }
 
@@ -149,11 +151,6 @@ body .transparent-button {
             topNav.style.display = "block";
             backgroundAudio.play();
         });
-        
-        var blink = document.getElementById('main-content');
-        setInterval(function() {
-            blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
-        }, 1500);
     </script>
 </body>
 </html>
